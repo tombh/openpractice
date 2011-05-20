@@ -1,0 +1,88 @@
+body{
+  color: #0D1C1F;
+  background-color: #F5F4FC;
+  font-family: "acuta-1","acuta-2";
+  letter-spacing: 0.1em;   
+  line-height: 1.5em;
+}
+
+#container{
+  width: 700px;
+  margin: auto;
+}
+
+#info{
+  font-size: small;
+  margin-bottom: 5em;
+}
+
+h1{
+  font-weight: 900;
+  font-size: 5em;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #8C99B9;
+  margin-top: 20px;
+}
+
+a{
+  color: #8C99B9;
+  text-decoration: none;
+}
+a:hover{
+  border-bottom: 1px solid #8C99B9;
+}
+
+#logo{
+  border: none;
+  text-decoration: none;
+  text-shadow: 0px 0px 50px #ccc;
+}
+
+#description{
+  font-size: 0.75em;
+}
+#description ul{
+  margin-left: 5px;
+  list-style-type: circle;
+}
+#tweets{
+  float: left;
+  width: 500px;
+  margin-right: 25px;  
+}
+
+#right{
+  float: left;
+  width: 170px;
+  margin-top: 15px;
+}
+#right li{
+  margin: 0 0 5px 1em;
+}
+
+#league{
+  margin-top: 2em;
+  font-size: small;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li{
+  margin-bottom: 2em;
+}
+.meta{
+  font-size: small;
+  text-align: right;
+}
+.profile_pic{
+  float: left;
+  padding: 0;
+  border: 2px solid #6E407E;
+  border-radius: 3px;
+  margin: 0 10px 0 0;
+}
