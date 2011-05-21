@@ -201,11 +201,15 @@ class tweetFactory{
    */
   public function return_tweets($filter = FALSE, $from = 0, $to = -1){
 
+    $filter = mysql_escape_string($filter);
+    $from = mysql_escape_string($from);
+    $to = mysql_escape_string($to);
+    
     //Output as JSON if not called from CLi
     //Write a file of JSON if not
     $write_file = (php_sapi_name() == 'cli' && empty($_SERVER['REMOTE_ADDR'])) ? TRUE : FALSE;       
 
-    if( $filter !== FALSE ){
+    if( $filter !== FALSE ){      
       $WHERE = "WHERE handle = '$filter'";
     }    
 

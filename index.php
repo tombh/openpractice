@@ -72,11 +72,6 @@
         <br /><br />
 
         <?php if(empty($handle)) : ?>
-          <p>
-          You are encouraged to express yourself in as matter-a-fact way as is possible. The felt truth of
-          your experience being more interesting than how you interpret it.
-          </p>
-
           <small>
           <ul>
             <li>Avatars link to user's Twitter accounts.</li>
