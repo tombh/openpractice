@@ -34,6 +34,8 @@
     </div>
 
     <div id="info">
+
+      <center><em><small>The paint is wet here, <a href="http://search.twitter.com/search?q=%23opsite">#opsite</a> wants to know what you think before it dries.</small></em></center>
       
       <?php if(!empty($handle)) : ?>
         <center>
