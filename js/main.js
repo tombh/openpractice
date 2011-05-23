@@ -47,7 +47,7 @@ function getTweets(){
       alert("There was an error retrieving the tweets :(");
     },
     success   : function(json){
-      tweets = eval(json);
+      var tweets = eval(json);
       render_tweets(tweets);
       setTimeout(getTweets, 60000);
       hovercards();
