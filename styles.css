@@ -13,7 +13,7 @@ body{
 
 #info{
   font-size: small;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
 }
 
 h1{
@@ -32,12 +32,17 @@ a{
 }
 a:hover{
   border-bottom: 1px solid #8C99B9;
+  color: #636c83;
+}
+
+h1 a:hover{
+  border-bottom: none;
 }
 
 #logo{
   border: none;
   text-decoration: none;
-  text-shadow: 0px 0px 50px #ccc;
+  text-shadow: 0px 0px 150px #636c83;
 }
 
 #description{
@@ -82,7 +87,28 @@ li{
 .profile_pic{
   float: left;
   padding: 0;
-  border: 2px solid #6E407E;
+  border: 2px solid #8C99B9;
   border-radius: 3px;
   margin: 0 10px 0 0;
+}
+
+.profile_pic:hover{
+  border-color: #636c83;
+}
+
+a.op_archive, .op_archive{
+  background-color: #8C99B9;
+  color: white;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 2px;  
+}
+
+a.op_archive:hover{
+  border-bottom: none;
+  background-color: #636c83;
+}
+
+#tweetbox{
+  margin-top: 1em;
 }
