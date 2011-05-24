@@ -30,6 +30,7 @@
 
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-23465987-1']);
+    _gaq.push(['_setDomainName', '.openpractice.me']);
     _gaq.push(['_trackPageview']);
 
     (function() {
@@ -109,7 +110,7 @@
       </div>
 
       <p>
-        <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2Fopenpractice%2F200626913315542&amp;width=165&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;height=262" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:165px; height:262px;" allowTransparency="true"></iframe>
+        <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2Fopenpractice%2F200626913315542&amp;width=165&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;height=380" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:165px; height:380px;" allowTransparency="true"></iframe>
       </p>
       </small>
     </div>

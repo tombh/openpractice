@@ -36,9 +36,15 @@
 class tweetFactory{
 
   /**
+   * When outputting as a JSON file, where should it be saved
+   */
+  public static $JSONfile;
+  
+  /**
    * $search_terms takes and array of strings
   **/
   public function __construct(){
+    self::$JSONfile = dirname(__FILE__) . '/../tweets.json';
     $this->tw = curl_init();    
     $this->db();
   }
@@ -47,11 +53,13 @@ class tweetFactory{
    * Provide a database conenction with PDO
    */
   private function db(){
-    $password = '6strings';
-    if(php_uname('n') == 'tombh-laptop') $password = '';
 
     try {
-      $db = new PDO("mysql:host=localhost;dbname=openpractice", 'root', $password);
+      if(php_uname('n') == 'tombh-laptop'){
+        $db = new PDO("mysql:host=localhost;dbname=openpractice", 'root', '');
+      }else{        
+        require('/root/db_conn.php');
+      }
       /*** set the error reporting attribute ***/
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);           
     }
@@ -230,9 +238,8 @@ class tweetFactory{
 
     $o = json_encode($o);
 
-    if($write_file){
-      $myFile = dirname(__FILE__) . '/tweets.json';
-      $fh = fopen($myFile, 'w') or die("Can't open file to output JSON into\n");
+    if($write_file){      
+      $fh = fopen(self::$JSONfile, 'w') or die("Can't open file to output JSON into\n");
       fwrite($fh, $o);
       fclose($fh);
     }else{

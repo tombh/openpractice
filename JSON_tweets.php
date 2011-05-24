@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
 
-include 'tweetFactory.class.php';
+include 'tweetFactory/tweetFactory.class.php';
 
 if(sizeOf($argv) > 0){
   //Called from the command line - probably via cron
