@@ -216,7 +216,10 @@ class tweetFactory{
     if( $filter !== FALSE ){
       $filter = mysql_escape_string($filter);
       $WHERE = "WHERE handle = '$filter'";
-    }    
+      if($filter == 'with/RTs') $WHERE = NULL;
+    }else{
+      $WHERE = "WHERE content NOT LIKE 'RT%'";
+    }
 
     $from = mysql_escape_string($from);
     $to = mysql_escape_string($to);

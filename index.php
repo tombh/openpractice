@@ -8,7 +8,7 @@
 
   <title>Open Practice</title>
 
-  <link rel="stylesheet" href="styles.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/styles.css" type="text/css" media="screen" />
 
   <link rel="icon" href="/images/favicon.png" type="image/png" />
 
@@ -53,17 +53,21 @@
       </h1>
     </div>
 
-    <div id="info">
-
-      <center><em><small>The paint is wet here, <a href="http://search.twitter.com/search?q=%23opsite">#opsite</a> wants to know what you think before it dries.</small></em></center>
-
-      
+    <div id="info">      
       
       <?php if(!empty($handle)) : ?>
         <center>
-          <h2>Just <a href="http://twitter.com/<?php echo $handle ?>" target="_blank" class="tweep">@<?php echo $handle ?></a>'s #openpractice tweets</h2>
-          <br />
-          <strong><a href="/">Back to everyone &raquo;</a></strong>
+          <?php if($handle == 'with/RTs') : ?>
+            <h2>The full stream including Retweets</h2>
+            <br />
+            <strong><a href="/">Back to the filtered stream &raquo;</a></strong>
+          <?php else : ?>
+            <h2>Just <a href="http://twitter.com/<?php echo $handle ?>" target="_blank" class="tweep">@<?php echo $handle ?></a>'s #openpractice tweets</h2>
+            <br />
+            <strong><a href="/">Back to everyone &raquo;</a></strong>
+          <?php endif ?>
+          
+
         </center>
      <?php else : ?>
         <div id="tweetbox"></div>
@@ -103,6 +107,7 @@
           <ul>
             <li>Avatars link to user's Twitter accounts.</li>
             <li><span class="op_archive">@{handles}</span> link to user's #openpractice archive.</li>
+            <li>Retweets are filtered by default, <a href="/with/RTs">go here</a> to include them.</li>
           </ul>
           </small>
         <?php endif; ?>
